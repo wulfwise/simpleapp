@@ -1,0 +1,26 @@
+global:
+  clusterName: sage-demo
+appdynamics-cloud-k8s-monitoring:
+  install:
+    clustermon: true 
+    defaultInfraCollectors: true 
+    logCollector: true    
+  clustermonConfig:
+    os: linux
+  containermonConfig:
+    os:
+      - linux
+  servermonConfig:
+    os:
+      - linux
+  logCollectorConfig:
+    os:
+      - linux
+    container:
+      defaultConfig:
+        enabled: true 
+appdynamics-otel-collector:
+  clientId: agt_4fSzK5vpMSChskrmEIygrd
+  clientSecret: ouB14VVe46KWrENwkEVcFgJS3fCpPYVO48dpiD6ArzU
+  endpoint: https://lab1.observe.appdynamics.com/data
+  tokenUrl: https://lab1.observe.appdynamics.com/auth/5fdfce64-941b-484b-9af0-27e936eaad8e/default/oauth2/token

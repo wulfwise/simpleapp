@@ -1,0 +1,10 @@
+global:
+  clusterName: sage-demo
+appdynamics-smartagent:
+  solution:
+    endpoint: https://lab1.observe.appdynamics.com
+  oauth:
+    clientId: agt_4fSzK5vpMSChskrmEIygrd
+    clientSecret: ouB14VVe46KWrENwkEVcFgJS3fCpPYVO48dpiD6ArzU
+    tokenUrl: https://lab1.observe.appdynamics.com/auth/5fdfce64-941b-484b-9af0-27e936eaad8e/default/oauth2/token
+    tenantId: 5fdfce64-941b-484b-9af0-27e936eaad8e

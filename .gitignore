@@ -1,0 +1,10 @@
+*.pyc
+*.log
+*.ini
+newrelic/
+.vscode
+cco-manifests/
+bin/
+include/
+lib/
+pyvenv.cfg

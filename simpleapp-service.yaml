@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sage-python-demo
+spec:
+  selector:
+    app: sage-python-demo
+  ports:
+    - port: 8080
+      targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: sage-python-demo
+spec:
+  selector:
+    matchLabels:
+      app: sage-python-demo
+  replicas: 3 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: sage-python-demo
+      annotations:
+        instrumentation.opentelemetry.io/inject-python: appdynamics/appd-instrumentation
+    spec:
+      containers:
+      - name: sage-python-demo-app
+        image: mondosage/simpleapp:v11.30.23.7
+        ports:
+        - containerPort: 8080
+          name: service
+       

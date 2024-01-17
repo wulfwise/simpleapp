@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+ <div class="jumbotron">
+        <h1>Simple Demo App</h1>
+        <p>This app is just a plain bootstrap Flask app to illustrate some Fugue examples.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="{{ url_for('contact') }}" role="button">Contact Us! &raquo;</a>
+        </p>
+      </div>
+{% endblock %}
